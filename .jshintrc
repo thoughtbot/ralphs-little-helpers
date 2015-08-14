@@ -2,7 +2,12 @@
   "predef": [
     "document",
     "window",
-    "-Promise"
+    "-Promise",
+    "visit",
+    "fillIn",
+    "click",
+    "find",
+    "findWithAssert"
   ],
   "browser": true,
   "boss": true,

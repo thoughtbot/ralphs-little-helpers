@@ -1,6 +1,40 @@
-# Ember-tb-test-helpers
+# ember-tb-test-helpers
 
 This README outlines the details of collaborating on this Ember addon.
+
+## Usage
+
+First, install the addon:
+
+    $ ember install ember-tb-test-helpers
+
+Then, import the helpers you need:
+
+```js
+import { clickOn, findRole } from 'ember-tb-test-helpers';
+
+test('it works', assert => {
+  assert.notInclude('foo', 'bar', 'foo is not bar');
+});
+```
+
+
+## Helpers
+
+* `clickOn(text)` - Clicks on elements containing the text
+* `clickRole(role)` - Clicks on elements with a matching `[data-role]`
+* `findRole(role)` - Finds (with assert) an element with matching `[data-role]`
+* `fillInField(name, value)` - Fills in a field with a `[name]` with the given
+  value
+
+## QUnit Matchers
+
+* `assert.include(needle, haystack)` - Asserts that the `needle` string is
+  included in the `haystack` string
+* `assert.notInclude(needle, haystack)` - Asserts that the `needle` string is
+  included in the `haystack` string
+* `assert.textEqual(expected, actual)` - Asserts that the `expected` string or
+  node's text equals the `actual` string
 
 ## Installation
 
