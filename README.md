@@ -13,7 +13,11 @@ Then, import the helpers you need:
 import { clickOn, findRole } from 'ember-tb-test-helpers';
 
 test('it works', assert => {
-  assert.notInclude('foo', 'bar', 'foo is not bar');
+  clickOn('Foo!');
+
+  andThen(() => {
+    assert.notInclude(findRole('foo').text(), 'bar', 'foo is not bar');
+  });
 });
 ```
 

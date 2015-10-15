@@ -1,3 +1,24 @@
-<h2 id="title">Welcome to Ember</h2>
+<div data-role="outer">
+  <div data-role="middle">
+    <div data-role="inner">
+      findRole
 
-{{outlet}}
+      <input id="checkbox-role" type="checkbox" data-role="checkbox">
+    </div>
+  </div>
+</div>
+
+<input name="the-input">
+
+<label for="labelled-checkbox">Checkbox!</label>
+<input id="labelled-checkbox" type="checkbox">
+
+{{#if submitted}}
+  <span id="submitted"></span>
+{{/if}}
+
+<input {{action "submit"}} type="submit" value="Submit!">
+
+<div id="the-text">
+  This is filler text. Includes the word "needle".
+</div>
