@@ -1,7 +1,6 @@
 # ember-tb-test-helpers
 
 This README outlines the details of collaborating on this Ember addon.
-
 ## Usage
 
 First, install the addon:
@@ -18,6 +17,12 @@ test('it works', assert => {
 });
 ```
 
+To use the matchers, import them in your test helper:
+
+```js
+// tests/test-helper.js
+import 'ember-tb-test-helpers/extend-qunit';
+```
 
 ## Helpers
 
