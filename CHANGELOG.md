@@ -1,6 +1,9 @@
 master
 ------
 
+0.0.2
+-----
+
 * Introduce `within` helper, for scoping helpers to a selector
 
 0.0.1
