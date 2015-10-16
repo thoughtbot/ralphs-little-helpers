@@ -10,6 +10,14 @@ First, install the addon:
 Then, import the helpers you need:
 
 ```js
+// tests/helpers/start-app.js
+
+import './ember-tb-test-helpers/test-helpers';
+// ...
+```
+
+```js
+// tests/acceptance/your-test.js
 import { clickOn, findRole } from 'ember-tb-test-helpers';
 
 test('it works', assert => {
@@ -35,6 +43,10 @@ import 'ember-tb-test-helpers/extend-qunit';
 * `findRole(role)` - Finds (with assert) an element with matching `[data-role]`
 * `fillInField(name, value)` - Fills in a field with a `[name]` with the given
   value
+* [`within(scope, block)`][within] - Scopes subsequent calls to test helpers by
+  the provided selector.
+
+[within]: tests/acceptance/app-uses-helpers-test.js
 
 ## QUnit Matchers
 

@@ -1,6 +1,7 @@
 import Ember from 'ember';
 import Application from '../../app';
 import config from '../../config/environment';
+import './ember-tb-test-helpers/test-helpers';
 
 export default function startApp(attrs) {
   var application;

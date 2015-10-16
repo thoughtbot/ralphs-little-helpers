@@ -62,3 +62,79 @@ test('include and notInclude matchers', assert => {
     assert.notInclude(theText, 'haystack', 'the text excludes a bad term');
   });
 });
+
+test('within', assert => {
+  visit('/');
+
+  within('form .included', scope => {
+    scope.click('[type="checkbox"]');
+    scope.fillIn('[type="text"]', 'scoped');
+
+    andThen(() => {
+      const submit = scope.find('[type="submit"]');
+      const button = scope.findWithAssert('button');
+
+      assert.ok(
+        findWithAssert('#included-checkbox').prop('checked'),
+        'scoped `click` works'
+      );
+      assert.textEqual(
+        findWithAssert('#included-text').val(),
+        'scoped',
+        'scoped `fillIn` works'
+      );
+
+      assert.ok(
+        !findWithAssert('#excluded-checkbox').prop('checked'),
+        'scoped `click` works'
+      );
+      assert.textEqual(
+        findWithAssert('#excluded-text').val(),
+        '',
+        'scoped `fillIn` works'
+      );
+
+      assert.equal(submit.length, 1, 'scoped `find` works');
+      assert.textEqual(submit.val(), 'included', 'scoped `find` works');
+      assert.equal(button.length, 1, 'scoped `findWithAssert` works');
+      assert.textEqual(button, 'included', 'scoped `findWithAssert` works');
+    });
+  });
+});
+
+test('within raises warnings', assert => {
+  within('', scope => {
+    assert.throws(
+      () => scope.visit('ignore'),
+      Ember.Error,
+      'throws error for `visit`'
+    );
+    assert.throws(
+      () => scope.currentPath(),
+      Ember.Error,
+      'throws error for `currentPath`'
+    );
+    assert.throws(
+      () => scope.currentRouteName(),
+      Ember.Error,
+      'throws error for `currentRouteName`'
+    );
+    assert.throws(
+      () => scope.currentURL(),
+      Ember.Error,
+      'throws error for `currentURL`'
+    );
+  });
+});
+
+test('scoped within', assert => {
+  visit('/');
+
+  within('form .included', scope => {
+    scope.within('.inner-included', innerScope => {
+      andThen(() => {
+        assert.ok(innerScope.findWithAssert('span'), 'nested within works');
+      });
+    });
+  });
+});
