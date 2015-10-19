@@ -1,7 +1,7 @@
 {
   "name": "ember-tb-test-helpers",
   "version": "0.0.2",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "thoughtbot's Ember Test Helpers",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,11 +11,11 @@
     "build": "ember build",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "repository": "https://github.com/thoughtbot/ember-tb-test-helpers",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Sean Doyle <sean.p.doyle24@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.2",
