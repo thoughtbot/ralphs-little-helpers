@@ -6,7 +6,7 @@ import {
   clickRole,
   fillInField,
   findRole,
-} from 'ember-tb-test-helpers';
+} from 'ralphs-little-helpers';
 
 module('Acceptance | App uses helpers', {
   beforeEach() {

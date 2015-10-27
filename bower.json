@@ -1,5 +1,5 @@
 {
-  "name": "ember-tb-test-helpers",
+  "name": "ralphs-little-helpers",
   "dependencies": {
     "ember": "1.13.5",
     "ember-cli-shims": "ember-cli/ember-cli-shims#0.0.3",

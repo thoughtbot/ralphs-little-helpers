@@ -1,5 +1,5 @@
 {
-  "name": "ember-tb-test-helpers",
+  "name": "ralphs-little-helpers",
   "version": "0.0.3",
   "description": "thoughtbot's Ember Test Helpers",
   "directories": {
@@ -11,7 +11,7 @@
     "build": "ember build",
     "test": "ember try:testall"
   },
-  "repository": "https://github.com/thoughtbot/ember-tb-test-helpers",
+  "repository": "https://github.com/thoughtbot/ralphs-little-helpers",
   "engines": {
     "node": ">= 0.10.0"
   },
@@ -39,7 +39,10 @@
     "ember-try": "0.0.6"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "test helpers",
+    "qunit matchers",
+    "thoughtbot"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.0.0"

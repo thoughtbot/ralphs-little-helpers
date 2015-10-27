@@ -1,8 +1,8 @@
-import findRole from 'ember-tb-test-helpers/find-role';
-import clickOn from 'ember-tb-test-helpers/click-on';
-import clickRole from 'ember-tb-test-helpers/click-role';
-import fillInField from 'ember-tb-test-helpers/fill-in-field';
-import 'ember-tb-test-helpers/extend-qunit';
+import findRole from 'ralphs-little-helpers/find-role';
+import clickOn from 'ralphs-little-helpers/click-on';
+import clickRole from 'ralphs-little-helpers/click-role';
+import fillInField from 'ralphs-little-helpers/fill-in-field';
+import 'ralphs-little-helpers/extend-qunit';
 
 export {
   clickOn,

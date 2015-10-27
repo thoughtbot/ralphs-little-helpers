@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-tb-test-helpers'
+  name: 'ralphs-little-helpers'
 };

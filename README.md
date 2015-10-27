@@ -1,24 +1,25 @@
-# ember-tb-test-helpers
+# ralphs-little-helpers
 
 This README outlines the details of collaborating on this Ember addon.
+
 ## Usage
 
 First, install the addon:
 
-    $ ember install ember-tb-test-helpers
+    $ ember install ralphs-little-helpers
 
 Then, import the helpers you need:
 
 ```js
 // tests/helpers/start-app.js
 
-import './ember-tb-test-helpers/test-helpers';
+import './ralphs-little-helpers/test-helpers';
 // ...
 ```
 
 ```js
 // tests/acceptance/your-test.js
-import { clickOn, findRole } from 'ember-tb-test-helpers';
+import { clickOn, findRole } from 'ralphs-little-helpers';
 
 test('it works', assert => {
   clickOn('Foo!');
@@ -33,7 +34,7 @@ To use the matchers, import them in your test helper:
 
 ```js
 // tests/test-helper.js
-import 'ember-tb-test-helpers/extend-qunit';
+import 'ralphs-little-helpers/extend-qunit';
 ```
 
 ## Helpers
@@ -87,11 +88,11 @@ See the [CONTRIBUTING] document.
 Thank you, [contributors]!
 
   [CONTRIBUTING]: CONTRIBUTING.md
-  [contributors]: https://github.com/thoughtbot/ember-tb-test-helpers/graphs/contributors
+  [contributors]: https://github.com/thoughtbot/ralphs-little-helpers/graphs/contributors
 
 ## License
 
-ember-tb-test-helpers is Copyright (c) 2015 thoughtbot, inc.
+ralphs-little-helpers is Copyright (c) 2015 thoughtbot, inc.
 It is free software, and may be redistributed
 under the terms specified in the [LICENSE] file.
 
@@ -99,13 +100,13 @@ under the terms specified in the [LICENSE] file.
 
 ## About
 
-ember-tb-test-helpers is maintained by [Sean Doyle][seanpdoyle].
+ralphs-little-helpers is maintained by [Sean Doyle][seanpdoyle].
 
 ![thoughtbot](https://thoughtbot.com/logo.png)
 
   [seanpdoyle]: https://github.com/seanpdoyle
 
-ember-tb-test-helpers is maintained and funded by thoughtbot, inc.
+ralphs-little-helpers is maintained and funded by thoughtbot, inc.
 The names and logos for thoughtbot are trademarks of thoughtbot, inc.
 
 We love open source software!
