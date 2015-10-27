@@ -1,18 +1,18 @@
 import QUnit from 'qunit';
 
 function normalizeString(actual) {
-  if(!actual) {
+  if (!actual) {
     actual = '';
   }
 
-  if(typeof actual.text === 'function') {
+  if (typeof actual.text === 'function') {
     return actual.text();
   } else {
     return actual.toString();
   }
 }
 
-QUnit.assert.textEqual = function(actual, expected, message) {
+QUnit.assert.textEqual = function   (actual, expected, message) {
   const actualString = normalizeString(actual);
 
   const trimActual = actualString
@@ -26,7 +26,7 @@ QUnit.assert.textEqual = function(actual, expected, message) {
 QUnit.assert.include = function(actual, expected, message) {
   const actualString = normalizeString(actual);
 
-  if (!message) {
+  if(!message) {
     message = `Expected '${actual}' to include '${expected}'`;
   }
 
