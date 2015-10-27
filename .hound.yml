@@ -1,2 +1,5 @@
 java_script:
   config_file: tests/.jshintrc
+jscs:
+  enabled: true
+  config_file: https://raw.githubusercontent.com/emberjs/ember.js/master/.jscsrc

@@ -1,11 +1,11 @@
 import QUnit from 'qunit';
 
 function normalizeString(actual) {
-  if (!actual) {
+  if(!actual) {
     actual = '';
   }
 
-  if (typeof actual.text === 'function') {
+  if(typeof actual.text === 'function') {
     return actual.text();
   } else {
     return actual.toString();
