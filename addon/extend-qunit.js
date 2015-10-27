@@ -1,4 +1,7 @@
+import Ember from 'ember';
 import QUnit from 'qunit';
+
+const { assert } = QUnit;
 
 function normalizeString(actual) {
   if (!actual) {
@@ -12,7 +15,7 @@ function normalizeString(actual) {
   }
 }
 
-QUnit.assert.textEqual = function(actual, expected, message) {
+assert.textEqual = function(actual, expected, message) {
   const actualString = normalizeString(actual);
 
   const trimActual = actualString
@@ -23,7 +26,7 @@ QUnit.assert.textEqual = function(actual, expected, message) {
   this.equal(trimActual, expected, message);
 };
 
-QUnit.assert.include = function(actual, expected, message) {
+assert.include = function(actual, expected, message) {
   const actualString = normalizeString(actual);
 
   if (!message) {
@@ -33,7 +36,7 @@ QUnit.assert.include = function(actual, expected, message) {
   this.ok(actualString.indexOf(expected) !== -1, message);
 };
 
-QUnit.assert.notInclude = function(actual, expected, message) {
+assert.notInclude = function(actual, expected, message) {
   const actualString = normalizeString(actual);
 
   if (!message) {
@@ -41,4 +44,15 @@ QUnit.assert.notInclude = function(actual, expected, message) {
   }
 
   this.ok(actualString.indexOf(expected) === -1, message);
+};
+
+assert.hasClass = function(selectorOrNode, expected, message) {
+  const node = Ember.$(selectorOrNode);
+  const classes = node.prop('class');
+
+  if (!message) {
+    message = `expected node to include "${expected}" class in "${classes}"`;
+  }
+
+  this.ok(node.hasClass(expected.toString()), message);
 };

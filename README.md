@@ -56,6 +56,8 @@ import 'ember-tb-test-helpers/extend-qunit';
   included in the `haystack` string
 * `assert.textEqual(expected, actual)` - Asserts that the `expected` string or
   node's text equals the `actual` string
+* `assert.hasClass(expected, actual)` - Asserts that the `expected` node or
+  selector has the `actual` class
 
 ## Installation
 

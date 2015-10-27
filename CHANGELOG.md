@@ -1,6 +1,8 @@
 master
 ------
 
+* Introduce `assert.hasClass` matcher
+
 0.0.2
 -----
 

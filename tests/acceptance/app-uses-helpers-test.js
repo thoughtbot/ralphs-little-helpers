@@ -27,6 +27,8 @@ test('finders', assert => {
   fillInField('the-input', 'fillInField');
 
   andThen(() => {
+    assert.hasClass('.included', 'included');
+    assert.hasClass(findWithAssert('.included'), 'included');
     assert.textEqual(
       findRole('outer', 'middle', 'inner'),
       'findRole',
