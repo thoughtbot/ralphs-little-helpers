@@ -1,2 +1,5 @@
-java_script:
-  config_file: tests/.jshintrc
+javascript:
+  enabled: false
+jscs:
+  enabled: true
+  config_file: .jscsrc
