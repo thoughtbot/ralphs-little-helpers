@@ -65,6 +65,31 @@ test('include and notInclude matchers', assert => {
   });
 });
 
+test('checkbox helpers', assert => {
+  visit('/');
+
+  andThen(() => {
+    assert.checked('#checked-checkbox');
+    assert.unchecked('#unchecked-checkbox');
+  });
+
+  check('#checked-checkbox');
+  uncheck('#unchecked-checkbox');
+
+  andThen(() => {
+    assert.checked('#checked-checkbox');
+    assert.unchecked('#unchecked-checkbox');
+  });
+
+  check('#unchecked-checkbox');
+  uncheck('#checked-checkbox');
+
+  andThen(() => {
+    assert.unchecked('#checked-checkbox');
+    assert.checked('#unchecked-checkbox');
+  });
+});
+
 test('within', assert => {
   visit('/');
 

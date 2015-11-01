@@ -56,3 +56,25 @@ assert.hasClass = function(selectorOrNode, expected, message) {
 
   this.ok(node.hasClass(expected.toString()), message);
 };
+
+assert.checked = function(selectorOrNode, message) {
+  const node = Ember.$(selectorOrNode);
+  const checked = node.is(':checked');
+
+  if (!message) {
+    message = `expected node (${selectorOrNode.toString()}) to be checked`;
+  }
+
+  this.ok(checked, message);
+};
+
+assert.unchecked = function(selectorOrNode, message) {
+  const node = Ember.$(selectorOrNode);
+  const unchecked = !node.is(':checked');
+
+  if (!message) {
+    message = `expected node (${selectorOrNode.toString()}) to be unchecked`;
+  }
+
+  this.ok(unchecked, message);
+};

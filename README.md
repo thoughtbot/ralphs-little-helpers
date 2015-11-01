@@ -39,11 +39,18 @@ import 'ralphs-little-helpers/extend-qunit';
 
 ## Helpers
 
+**Imported**
+
 * `clickOn(text)` - Clicks on elements containing the text
 * `clickRole(role)` - Clicks on elements with a matching `[data-role]`
 * `findRole(role)` - Finds (with assert) an element with matching `[data-role]`
 * `fillInField(name, value)` - Fills in a field with a `[name]` with the given
   value
+
+**Global**
+
+* `check(selector, context)` - Ensure an `input[type="checkbox"]` is checked
+* `uncheck(selector, context)` - Ensure an `input[type="checkbox"]` is unchecked
 * [`within(scope, block)`][within] - Scopes subsequent calls to test helpers by
   the provided selector.
 
@@ -59,6 +66,10 @@ import 'ralphs-little-helpers/extend-qunit';
   node's text equals the `actual` string
 * `assert.hasClass(expected, actual)` - Asserts that the `expected` node or
   selector has the `actual` class
+* `assert.checked(expected, message)` - Asserts that the `expected` node or
+  selector is `:checked`
+* `assert.unchecked(expected, message)` - Asserts that the `expected` node or
+  selector is not `:checked`
 
 ## Installation
 
