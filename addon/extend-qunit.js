@@ -30,7 +30,7 @@ assert.include = function(actual, expected, message) {
   const actualString = normalizeString(actual);
 
   if (!message) {
-    message = `Expected '${actual}' to include '${expected}'`;
+    message = `Expected '${actualString}' to include '${expected}'`;
   }
 
   this.ok(actualString.indexOf(expected) !== -1, message);
@@ -40,7 +40,7 @@ assert.notInclude = function(actual, expected, message) {
   const actualString = normalizeString(actual);
 
   if (!message) {
-    message = `Expected '${actual}' not to include '${expected}'.`;
+    message = `Expected '${actualString}' not to include '${expected}'.`;
   }
 
   this.ok(actualString.indexOf(expected) === -1, message);

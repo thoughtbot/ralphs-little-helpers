@@ -1,6 +1,8 @@
 master
 ------
 
+* Fix `assert.include` and `assert.notInclude` default failure message.
+
 0.0.3
 -----
 
