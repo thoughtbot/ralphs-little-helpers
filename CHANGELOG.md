@@ -1,6 +1,9 @@
 master
 ------
 
+0.0.4
+-----
+
 * Fix `assert.include` and `assert.notInclude` default failure message.
 * Introduce `check` and `uncheck` global async helpers.
   Introduce `assert.checked` and `assert.unchecked`. [#9]
