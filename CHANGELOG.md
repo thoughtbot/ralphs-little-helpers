@@ -1,6 +1,11 @@
 master
 ------
 
+* When an QUnit matcher fails, the message includes both the default
+  failure message and any user-provided failure message. [#11]
+
+[#11]: https://github.com/thoughtbot/ralphs-little-helpers/pull/11
+
 0.0.4
 -----
 
