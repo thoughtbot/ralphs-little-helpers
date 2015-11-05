@@ -1,6 +1,9 @@
 master
 ------
 
+0.0.5
+-----
+
 * When an QUnit matcher fails, the message includes both the default
   failure message and any user-provided failure message. [#11]
 
