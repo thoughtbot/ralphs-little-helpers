@@ -8,7 +8,8 @@ First, install the addon:
 
     $ ember install ralphs-little-helpers
 
-Then, import the helpers you need:
+To use the asynchronous Acceptance Test Helpers, import them in your
+application's `startApp` helper:
 
 ```js
 // tests/helpers/start-app.js
@@ -17,15 +18,17 @@ import './ralphs-little-helpers/test-helpers';
 // ...
 ```
 
+To import Acceptance Test finders, import them by name:
+
 ```js
 // tests/acceptance/your-test.js
-import { clickOn, findRole } from 'ralphs-little-helpers';
+import { findRole } from 'ralphs-little-helpers';
 
 test('it works', assert => {
-  clickOn('Foo!');
+  clickOn('Confirm');
 
   andThen(() => {
-    assert.notInclude(findRole('foo').text(), 'bar', 'foo is not bar');
+    assert.textEqual(findRole('bar'), 'Confirmed!', '"Confirm" button clicked');
   });
 });
 ```
@@ -39,18 +42,18 @@ import 'ralphs-little-helpers/extend-qunit';
 
 ## Helpers
 
-**Imported**
+**Acceptance Test Finders**
 
-* `clickOn(text)` - Clicks on elements containing the text
-* `clickRole(role)` - Clicks on elements with a matching `[data-role]`
 * `findRole(role)` - Finds (with assert) an element with matching `[data-role]`
-* `fillInField(name, value)` - Fills in a field with a `[name]` with the given
-  value
 
-**Global**
+**Async Acceptance Test Helpers**
 
 * `check(selector, context)` - Ensure an `input[type="checkbox"]` is checked
 * `uncheck(selector, context)` - Ensure an `input[type="checkbox"]` is unchecked
+* `clickOn(text)` - Clicks on elements containing the text
+* `clickRole(role)` - Clicks on elements with a matching `[data-role]`
+* `fillInField(name, value)` - Fills in a field with a `[name]` with the given
+  value
 * [`within(scope, block)`][within] - Scopes subsequent calls to test helpers by
   the provided selector.
 

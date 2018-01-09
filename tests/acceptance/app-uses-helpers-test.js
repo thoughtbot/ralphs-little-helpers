@@ -1,12 +1,7 @@
 import Ember from 'ember';
 import { module, test } from 'qunit';
 import startApp from '../../tests/helpers/start-app';
-import {
-  clickOn,
-  clickRole,
-  fillInField,
-  findRole,
-} from 'ralphs-little-helpers';
+import { findRole } from 'ralphs-little-helpers';
 
 module('Acceptance | App uses helpers', {
   beforeEach() {
@@ -158,6 +153,8 @@ test('scoped within', assert => {
   visit('/');
 
   within('form .included', scope => {
+    scope.clickOn('included');
+
     scope.within('.inner-included', innerScope => {
       andThen(() => {
         assert.ok(innerScope.findWithAssert('span'), 'nested within works');

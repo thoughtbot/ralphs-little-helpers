@@ -1,6 +1,9 @@
 master
 ------
 
+* Split synchronous finders (like `findRole`) from asynchronous test helpers
+  (like `clickOn`), and modifies the way they're imported and utilized.
+
 0.0.5
 -----
 
